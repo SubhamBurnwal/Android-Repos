@@ -1,0 +1,155 @@
+class cell{
+	int value;
+	boolean values[9] = true;
+}
+}
+region{
+	int groupID;
+	int color;
+	vector<Int> added;
+	vector<Int> removed;
+	vector<Point> foreigner;	//for foreigners, f.x stores groupID, f.y stores cellID
+}
+
+layout{
+int hard;
+vector<region> regions;
+}
+
+level{
+cell board[9][9];	//not 9rowsX9columns, instead 9groupsX9cells each
+layout l;
+int total_count[9];
+init(){
+	//generate board
+		generate();
+	//choose layout
+		//randomly or by difficulty
+	//calculate sums
+	for(int i=0;l.regions.get(i)!=null;i++){
+		sum.add(findSum(l.regions.get(i)));
+	}
+}
+vector<int> sum;
+}
+
+void generate(){
+	int temp[9];
+	int i, j, num;
+	bool reject;
+	vector<int> group;
+	for(i=0;i<9;i++){
+		do{
+			reject = false;
+			num=random(9);
+			for(j=0;j<i;j++)
+				if(group.get(j)==num) reject = true;
+		}while(!reject);
+		group.add(num);
+		board[0][i].value = num;
+	}
+	for(i=1;i<3;i++){
+		temp = rotateRow(board[i-1]);
+		for(j=1;j<3;j++)
+			board[i][j].value = temp[j];
+	}
+	for(i=3;i<9;i++){
+		temp = rotateCol(board[i-3]);
+		for(j=0;j<9;j++)
+			board[i][j].value = temp[j];
+	}
+	rearrangeColumns();
+	rearrangeRows();
+	
+	return board;
+}
+
+int findSum(region r, cell board[9][9]){
+int sum=0, i=0;
+if(r.removed==null)
+	while(r.added.get(i)!=null){
+	//	added value is board's group's	cell's	value
+		int val =	board[r.groupID][r.added.get(i)].value;
+		sum+=val;
+		i++;
+	}
+else
+	while(i<9){
+		boolean skip = false;
+		for(int j=0;
+			if(i==r.removed.get(j)) {
+				skip = true;
+				break;
+			}
+		if(!skip){
+			int val = board[r.groupID][i].value;
+			sum+=val;
+		}
+		i++;
+		skip = false;
+	}
+i=0;
+while(r.foreigner.get(i)!=null){
+	Point f = r.foreigner.get(i);
+	int val;
+		f = {f.x,f.y-3};
+		val = board[f.x,f.y].value;
+	sum+=val;
+	i++;
+}
+return sum;
+}
+
+void drawGrid(){
+Paint p;
+p.setColor = Color.BLACK;
+for(int i=0;i<18;i++)
+	p.setLineThickness(inner_grid_thickness);
+	if(i==0 || i==8 || i==9 || i==17) p.setLineThickness(outer_grid_thickness);
+	int x,x2,y,y2;
+	if(i<9){
+		x=board_offset.x+i*cell_side;
+		x2=x;
+		y=board_offset.y;
+		y2=y+9*cell_side;
+	}
+	else{
+		x=board_offset.x;
+		x2=x+9*cell_side;
+		y=board_offset.y+i*cell_side/2;
+		y2=y;
+	}
+	drawLine(x,y,x2,y2,p);
+}
+
+void shadeRegions(layout l){
+	Paint p;
+	for(int i=0;l.regions.get(i)!=null;i++){
+		region r = l.regions.get(i);
+		p.setColor = r.color;
+		for(int j=0;r.get(j)!=null;j++){
+			int x= abs(r.groupID%3) * 3*cell_side;	//adding group offset
+			int y= r.groupID/3 * 3*cell_side;
+			int x+=r.regions.get(j).x*cell_side;	//adding cell offset
+			int y+=r.regions.get(j).y*cell_side;
+			drawRect(x,y,x+cell_side,y+cell_side,p);
+		}
+	}
+}
+void paintPens(cell board[9][9]){
+	Paint p;
+	for(int i=0;i<9;i++)
+		for(int j=0;j<9;j++){
+			int x=(i%3)*3*cell_side + (j%3)*cell_size + (cell_size-font_width)/2;
+			int y=(i/3)*3*cell_side + (j/3)*cell_size + (cell_size-font_height)/2;
+			p.setColor = Colors.GREY;
+			for(int k=0;k<9;k++)
+				if(board[i][j].values.get(k)){
+					int dx=(k%3)*small_font_width;
+					int dy=(k/3)*small_font_height;
+					drawText(k,x+dx,y+dy,p);
+				}	
+			p.setColor = Colors.BLACK;
+			drawText(board[i][j].value,x,y,p);
+		}
+}

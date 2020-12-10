@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<array name="permal">
+    <item>@array/grass</item>
+    <item>@array/floor</item>
+    <item>@array/lava</item>
+    <item>@array/water</item>
+</array>
+
+<array name="grass">
+    <item>200</item>
+    <item>pr</item>
+    <item>1</item>
+    <item>1</item>
+</array>
+<array name="floor">
+    <item>200</item>
+    <item>pr</item>
+    <item>1</item>
+    <item>1</item>
+</array>
+<array name="lava">
+    <item>200</item>
+    <item>pr</item>
+    <item>1</item>
+    <item>1</item>
+</array>
+<array name="water">
+    <item>200</item>
+    <item>pr</item>
+    <item>1</item>
+    <item>1</item>
+</array>
+<string-array name="perma">
+    <item>grass</item>
+    <item>floor</item>
+    <item>lava</item>
+    <item>water</item>
+</string-array>
+
+<string-array name="build">
+    <item>wall</item>
+    <item>weak_wall</item>
+    <item>gate</item>
+    <item>warp</item>
+    <item>temple</item>
+</string-array>
+
+<string-array name="tempo">
+    <item>speedup</item>
+    <item>trespass</item>
+    <item>freeze</item>
+    <item>hint</item>
+    <item>skip</item>
+    <item>minuslife</item>
+    <item>pluslife</item>
+</string-array>
+
+<string-array name="bound">
+    <item>gear</item>
+    <item>portal</item>
+    <item>laser</item>
+    <item>box</item>
+</string-array>
+
+<string-array name="items">
+    <item>hero</item>
+    <item>path</item>
+    <item>power_up</item>
+    <item>mecha</item>
+</string-array>
+
+<string-array name="sfx">
+    <item>arrow</item>
+    <item>wind</item>
+    <item>water</item>
+    <item>wave</item>
+    <item>fog</item>
+    <item>bubble</item>
+    <item>sparks</item>
+    <item>sparkle</item>
+</string-array>
+
+</resources>

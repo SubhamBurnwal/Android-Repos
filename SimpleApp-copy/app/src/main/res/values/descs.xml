@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--default descriptions-->
+    <!--AppCompatActivity-->
+    
+    <!--main_menu-->
+    <string-array name="menu_areas">
+        <item>@string/home_menus</item>
+        <item>@string/left_side_menus</item>
+        <item>@string/guide_books</item>
+        <item>@string/sound_options</item>
+        <item>@string/in_game_options</item>
+    </string-array>
+    <string-array name="main_menu_label">
+        <item>@string/menu_play</item>
+        <item>@string/menu_game_mode</item>
+        <item>@string/menu_quit</item>
+    </string-array>
+    <!--left_side_menu-->
+    <string-array name="left_menu_label">
+    <item>@string/menu_control</item>
+    <item>@string/menu_theme</item>
+    <item>@string/menu_help</item>
+    <item>@string/menu_guide</item>
+    <item>@string/menu_packs</item>
+    <item>@string/menu_reddit</item>
+    <item>@string/menu_feed</item>
+    </string-array>
+    <!--guide_menu-->
+    <string-array name="guide_menu_label">
+    <item>@string/guide_index</item>
+    <item>@string/how_to</item>
+    <item>@string/guide_pups</item>
+    <item>@string/guide_gems</item>
+    <item>@string/guide_art</item>
+    <item>@string/guide_tips</item>
+    <item>@string/guide_credits</item>
+    <item>@string/guide_discord</item>
+    </string-array>
+    <!--sound_menu-->
+    <string-array name="sound_menu_label">
+    <item>@string/sound_master</item>
+    <item>@string/sound_music</item>
+    <item>@string/sound_sfx</item>
+    <item>@string/sound_ui</item>
+    </string-array>
+    <!--in_game_menu-->
+    <string-array name="in_game_menu">
+    <item>@string/game_save</item>
+    <item>@string/game_load</item>
+    <item>@string/game_quit</item>
+    </string-array>
+
+    <!--<item>@string/fullscr_name</item>
+    <item>@string/fullscr_menu</item>-->
+
+    <string-array name="in_game_message">
+    <item>@string/game_forfeit_confirm</item>
+    <item>@string/game_quit_confirm</item>
+    <item>@string/game_quit_confirm_2</item>
+    <item>@string/game_quit_tip</item>
+    <item>@string/game_load_confirm</item>
+    <item>@string/game_load_confirm_2</item>
+    <item>@string/game_ovwrite_confirm</item>
+    <item>@string/game_ovwrite_confirm_2</item>
+    <item>@string/game_saved_mess</item>
+    <item>@string/game_loaded_mess</item>
+    <item>@string/menu_reddit_info</item>
+    <item>@string/menu_reddit_info2</item>
+    <item>@string/menu_feed_info</item>
+    </string-array>
+    
+    <!--dont look here-->
+    <!--Activity-->
+    <string name="app_name">Dungeon Dash</string>
+    <string name="app_name_1">Dungeon</string>
+    <string name="app_name_2">Dash</string>
+    <string name="app_name_sub">Flagship Games</string>
+
+    <string name="home_menus">center</string>
+    <string name="left_side_menus">left</string>
+    <string name="guide_books">guide</string>
+    <string name="sound_options">sound</string>
+    <string name="in_game_options">in game</string>
+    
+    <string name="menu_play">Start</string>
+    <string name="menu_game_mode">Game Mode</string>
+    <string name="menu_quit">Quit</string>
+
+    <string name="menu_control">Control Deck</string>
+    <string name="menu_theme">Look N Feel</string>
+    <string name="menu_help">Play Tutorial</string>
+    <string name="menu_guide">Book of Secrets</string>
+    <string name="menu_packs">Card Packs</string>
+    <string name="menu_reddit">Join the Club</string>
+    <string name="menu_feed">Bugs in a Bottle</string>
+    <string name="menu_reddit_info">Join us on Reddit</string>
+    <string name="menu_reddit_info2">The pirate haven!</string>
+    <string name="menu_feed_info">Seen any nasty bugz? Send em to us for a Treasure Box!</string>
+
+    <string name="fullscr_name">Bon Voyage</string>
+    <string name="fullscr_menu">Halt</string>
+    <string name="game_save">Save</string>
+    <string name="game_load">Resume</string>
+    <string name="game_quit">Leave</string>
+    <string name="game_forfeit_confirm">Run away from battle?</string>
+    <string name="game_quit_confirm">Forfeit adventure?</string>
+    <string name="game_quit_confirm_2">You can save it instead..</string>
+    <string name="game_quit_tip">Auto save every time you quit?</string>
+    <string name="game_load_confirm">Resume adventure?</string>
+    <string name="game_load_confirm_2">Current progress will be lost.</string>
+    <string name="game_ovwrite_confirm">Overwrite existing log?</string>
+    <string name="game_ovwrite_confirm_2">Existing adventure will be lost!</string>
+    <string name="game_saved_mess">Progress saved Captain!</string>
+    <string name="game_loaded_mess">Adventure reloaded!</string>
+
+    <string name="sound_master">Master</string>
+    <string name="sound_music">Music</string>
+    <string name="sound_sfx">Sfx</string>
+    <string name="sound_ui">UI</string>
+
+    <string name="guide_index">Topics</string>
+    <string name="how_to">How To Survive</string>
+    <string name="guide_pups">Super Powers</string>
+    <string name="guide_gems">Crystals</string>
+    <string name="guide_art">Doodles</string>
+    <string name="guide_tips">How To Be The King</string>
+    <string name="guide_credits">Who Made This Mess</string>
+    <string name="guide_discord">Ask the Quarter Master</string>
+
+</resources>

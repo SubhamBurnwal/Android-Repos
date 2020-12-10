@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <array name="pastelColor" max="10" shades="0">
+        <item>#ffc000</item>
+        <item>#92d050</item>
+        <item>#4bacc6</item>
+        <item>#bfbfbf</item>
+        <item>#d99795</item>
+        <item>#ffffff</item>
+        <item>#f79646</item>
+        <item>#b6dde8</item>
+        <item>#b2a1c7</item>
+        <item>#bab284</item>
+    </array>
+    <array name="feltColor" max="10" shades="0">
+        <item>#ffc000</item>
+        <item>#00b050</item>
+        <item>#00b0f0</item>
+        <item>#7f7f7f</item>
+        <item>#ff0000</item>
+        <item>#ffffff</item>
+        <item>#974807</item>
+        <item>#215867</item>
+        <item>#7030a0</item>
+        <item>#632523</item>
+    </array>
+
+    <array name="paperColor" max="10" shades="3">
+        <item>#d2cd00</item><item>#dad500</item><item>#ffff25</item>
+        <item>#00c000</item><item>#00c800</item><item>#00d600</item>
+        <item>#00a7e2</item><item>#00b0f0</item><item>#00b9fa</item>
+        <item>#868686</item><item>#909090</item><item>#9d9d9d</item>
+        <item>#ff0000</item><item>#ff1515</item><item>#ff2121</item>
+        <item>#bfbfbf</item><item>#cbcbcb</item><item>#ffffff</item>
+        <item>#c96009</item><item>#d56509</item><item>#e36d0a</item>
+        <item>#0070bf</item><item>#0075cb</item><item>#007ad5</item>
+        <item>#c700c7</item><item>#d100d1</item><item>#fd00fe</item>
+        <item>#008d01</item><item>#009801</item><item>#00ab01</item>
+    </array>
+</resources>

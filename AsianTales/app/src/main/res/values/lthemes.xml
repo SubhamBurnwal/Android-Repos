@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--layout-themes-->
+    <integer name="totalThemes">4</integer>
+
+    <string-array name="themeNames">
+        <item>"lite"</item>
+        <item>"pastel"</item>
+        <item>"red"</item>
+        <item>"high contrast</item>
+    </string-array>
+
+    <!--layout-theme dimensions-->
+    <integer-array name="theme1prop">
+        <item name="inner_grid_thickness">4166</item>
+        <item name="outer_grid_thickness">6944</item>
+        <item name="small_font_width">30555</item>
+        <item name="font_width">77777</item>
+        <item name="inner_grid_style">0</item>
+        <item name="outer_grid_style">0</item>
+        <item name="pencil_color">0xFF444444</item>
+        <item name="board_offset">7000</item>
+        <item name="input_color">0xFF000000</item>
+        <item name="input_tcolor">0xFFFFFF25</item>
+        <item name="bg_color">0xFFF5F5FF</item>
+        <item name="lock_color">0xFF000000</item>
+        <item name="border_color">0xFF000000</item>
+        <item name="tray_color">0x8000AC00</item>
+        <item name="shadow_color">0x8000AC00</item>
+        <item name="input_border_color">0x00000000</item>
+        <item name="inner_border_color">0xFFFFFFFF</item>
+    </integer-array>
+    <integer-array name="theme2prop">
+        <item name="inner_grid_thickness">4166</item>
+        <item name="outer_grid_thickness">6944</item>
+        <item name="small_font_width">30555</item>
+        <item name="font_width">77777</item>
+        <item name="inner_grid_style">0</item>
+        <item name="outer_grid_style">0</item>
+        <item name="pencil_color">0xFF000000</item>
+        <item name="board_offset">7000</item>
+        <item name="input_color">0xFFE0E0E0</item>
+        <item name="input_tcolor">0xFF0A0A0A</item>
+        <item name="bg_color">0xFF15255F</item>
+        <item name="lock_color">0xFF000000</item>
+        <item name="border_color">0xFF000000</item>
+        <item name="tray_color">0xFFF5F5F5</item>
+        <item name="shadow_color">0xFFFF0000</item>
+        <item name="input_border_color">0xFFFFFFFF</item>
+        <item name="inner_border_color">0xFFFFFFFF</item>
+    </integer-array>
+    <integer-array name="theme3prop">
+        <item name="inner_grid_thickness">4166</item>
+        <item name="outer_grid_thickness">6944</item>
+        <item name="small_font_width">30555</item>
+        <item name="font_width">77600</item>
+        <item name="inner_grid_style">0</item>
+        <item name="outer_grid_style">0</item>
+        <item name="pencil_color">0xFF444444</item>
+        <item name="board_offset">7000</item>
+        <item name="input_color">0xFFE0E0E0</item>
+        <item name="input_tcolor">0xFF0A0A0A</item>
+        <item name="bg_color">0xFFF5F5FF</item>
+        <item name="lock_color">0xFF000000</item>
+        <item name="border_color">0xFF000000</item>
+        <item name="tray_color">0x80000000</item>
+        <item name="shadow_color">0xFFFF0000</item>
+        <item name="input_border_color">0x00000000</item>
+        <item name="inner_border_color">0xFFFFFFFF</item>
+    </integer-array>
+    <integer-array name="theme4prop">
+        <item name="inner_grid_thickness">4166</item>
+        <item name="outer_grid_thickness">6944</item>
+        <item name="small_font_width">30555</item>
+        <item name="font_width">77777</item>
+        <item name="inner_grid_style">0</item>
+        <item name="outer_grid_style">0</item>
+        <item name="pencil_color">0xFF444444</item>
+        <item name="board_offset">7000</item>
+        <item name="input_color">0xFFE0E0E0</item>
+        <item name="input_tcolor">0xFF0A0A0A</item>
+        <item name="bg_color">0xFFF5F5FF</item>
+        <item name="lock_color">0xFF000000</item>
+        <item name="border_color">0xFF000000</item>
+        <item name="tray_color">0x80000000</item>
+        <item name="shadow_color">0xFFFF0000</item>
+        <item name="input_border_color">0x00000000</item>
+        <item name="inner_border_color">0xFFFFFFFF</item>
+    </integer-array>
+
+    <!--layout-theme color scheme-->
+    <integer-array name="theme1">
+        <item name="b1">0xFFE1C000</item>
+        <item name="b2">0xFF92D050</item>
+        <item name="b3">0xFF4BACC6</item>
+        <item name="b4">0xFFBFBFBF</item>
+        <item name="b5">0xFFD99795</item>
+        <item name="b6">0xFFFFFFFF</item>
+        <item name="b7">0xFFF79646</item>
+        <item name="b8">0xFFB6DDE8</item>
+        <item name="b9">0xFFB2A1C7</item>
+        <item name="b10">0xFFC6C09A</item>
+        <item name="f1">0xFFFFFF00</item>
+        <item name="f2">0xFF6BA42C</item>
+        <item name="f3">0xFF31849B</item>
+        <item name="f4">0xFFA5A5A5</item>
+        <item name="f5">0xFFE6B9B8</item>
+        <item name="f6">0xFFC5BE97</item>
+        <item name="f7">0xFFE46D0A</item>
+        <item name="f8">0xFF95B3D7</item>
+        <item name="f9">0xFF856AA6</item>
+        <item name="f10">0xFF948B54</item>;
+    </integer-array>
+    <integer-array name="theme2">
+        <item name="b1">0xFFFFC000</item>
+        <item name="b2">0xFF00B050</item>
+        <item name="b3">0xFF00B0F0</item>
+        <item name="b4">0xFF7F7F7F</item>
+        <item name="b5">0xFFFF0000</item>
+        <item name="b6">0xFFFFFFFF</item>
+        <item name="b7">0xFF974807</item>
+        <item name="b8">0xFF215867</item>
+        <item name="b9">0xFF7030A0</item>
+        <item name="b10">0xFF501D1C</item>
+        <item name="f1">0xFFCC9900</item>
+        <item name="f2">0xFFB4DE86</item>
+        <item name="f3">0xFF31849B</item>
+        <item name="f4">0xFFA5A5A5</item>
+        <item name="f5">0xFFD89290</item>
+        <item name="f6">0xFFC5BE97</item>
+        <item name="f7">0xFFE46D0A</item>
+        <item name="f8">0xFF95B3D7</item>
+        <item name="f9">0xFF8D74AC</item>
+        <item name="f10">0xFFF79646</item>
+    </integer-array>
+    <integer-array name="theme3">
+        <item name="b1">0xFF404040</item>
+        <item name="b2">0xFFFF0000</item>
+        <item name="b3">0xFF272727</item>
+        <item name="b4">0xFFFF0000</item>
+        <item name="b5">0xFF272727</item>
+        <item name="b6">0xFFFFFFFF</item>
+        <item name="b7">0xFF404040</item>
+        <item name="b8">0xFF404040</item>
+        <item name="b9">0xFFFF0000</item>
+        <item name="b10">0xFF272727</item>
+        <item name="f1">0xFFFFFFFF</item>
+        <item name="f2">0xFFFFFFFF</item>
+        <item name="f3">0xFFFFFFFF</item>
+        <item name="f4">0xFFFFFFFF</item>
+        <item name="f5">0xFFFFFFFF</item>
+        <item name="f6">0xFF000000</item>
+        <item name="f7">0xFFFFFFFF</item>
+        <item name="f8">0xFFFFFFFF</item>
+        <item name="f9">0xFFFFFFFF</item>
+        <item name="f10">0xFFFFFFFF</item>
+    </integer-array>
+    <integer-array name="theme4">
+        <item name="b1">0xFFE1C000</item>
+        <item name="b2">0xFF92D050</item>
+        <item name="b3">0xFF4BACC6</item>
+        <item name="b4">0xFFBFBFBF</item>
+        <item name="b5">0xFFD99795</item>
+        <item name="b6">0xFFFFFFFF</item>
+        <item name="b7">0xFFF79646</item>
+        <item name="b8">0xFFB6DDE8</item>
+        <item name="b9">0xFFB2A1C7</item>
+        <item name="b10">0xFFC6C09A</item>
+        <item name="f1">0xFFFFFF00</item>
+        <item name="f2">0xFF6BA42C</item>
+        <item name="f3">0xFF31849B</item>
+        <item name="f4">0xFFA5A5A5</item>
+        <item name="f5">0xFFE6B9B8</item>
+        <item name="f6">0xFFC5BE97</item>
+        <item name="f7">0xFFE46D0A</item>
+        <item name="f8">0xFF95B3D7</item>
+        <item name="f9">0xFF856AA6</item>
+        <item name="f10">0xFF948B54</item>;
+    </integer-array>
+</resources>

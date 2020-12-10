@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GameView">
+        <attr name="width" format="integer"/>
+        <attr name="height" format="integer"/>
+        <!--<attr name="layoutID" format="integer"/>
+        <attr name="themeID" format="enum">
+            <enum name="pastel" value="0"/>
+            <enum name="felt" value="1"/>
+            <enum name="paper" value="2"/>
+        </attr>-->
+    </declare-styleable>
+</resources>

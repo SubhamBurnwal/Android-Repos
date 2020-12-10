@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--overlays-->
+    <color name="black_overlay">#66000000</color>
+    <color name="white_overlay">#66ffffff</color>
+    <color name="blue_overlay">#9e5abdff</color>
+    <color name="light_blue_overlay">#87c0cbd9</color>
+
+    <!--simple_button theme colors-->
+    <color name="sb_grad_norm_s">#ff0000</color>
+    <color name="sb_grad_norm_e">#80ff00ff</color>
+    <color name="sb_grad_clik_s">#7bea4040</color>
+    <color name="sb_grad_clik_e">#5cff6fff</color>
+    <color name="sb_fill_norm">#ff0000</color>
+    <color name="sb_fill_clik">#5cff6fff</color>
+
+    <!--background gradient-->
+    <color name="bg_grad_start">#fa495b</color>
+    <color name="bg_grad_mid">#fb838e</color>
+    <color name="bg_grad_leg">#fdbdc3</color>
+    <color name="bg_grad_end">#fffcfc</color>
+    <color name="bg_grad_border">#ffffff</color>
+</resources>
