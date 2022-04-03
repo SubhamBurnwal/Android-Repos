@@ -3,6 +3,9 @@
 *.ap_
 *.aab
 
+# Project Backup & Extra Resources Folder
+Backups/
+
 # Files for the ART/Dalvik VM
 *.dex
 
