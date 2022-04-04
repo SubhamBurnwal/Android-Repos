@@ -3,11 +3,9 @@
 
 Folders:
 
-app_resources: media resources used in all projects in repo
-
 AsianTales: choose-your-own-story game based on Indian folk tales
 
-Backups: backups of older working versions of projects (made when repo was not uploaded to git)
+Backups: backups of all resources and older working versions of projects (made when repo was not uploaded to git.) Set to ignored as of 03-04-2022.
 
 Kudoku: Sudoku variant puzzle which replaces Sudoku's cell hints with sum-of-region hints
 
