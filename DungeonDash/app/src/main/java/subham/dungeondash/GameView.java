@@ -1,5 +1,6 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,8 +18,8 @@ import android.view.SurfaceView;
 import java.text.DecimalFormat;
 import java.util.Vector;
 
-import static subham.simpleapp.gmtry.getCircleBisector;
-import static subham.simpleapp.gmtry.wrtCircle;
+import static subham.dungeondash.gmtry.getCircleBisector;
+import static subham.dungeondash.gmtry.wrtCircle;
 
 public class GameView extends SurfaceView implements Runnable {
 
@@ -30,7 +31,7 @@ public class GameView extends SurfaceView implements Runnable {
     //game control variables
     private boolean leftDragHeld, rightDragHeld;        //drag controls held or not
     private Point lastLeftDragHeld, lastRightDragHeld;  //last held positions in drag controls
-    private Point leftDragDisp, rightDragDisp;        //rate of change in held positions in drag controls
+    private Point leftDragDisp, rightDragDisp;          //rate of change in held positions in drag controls
 
     //menu props
     private Point btnSize;                              //current btn position, original btn position, original btn size
@@ -52,7 +53,7 @@ public class GameView extends SurfaceView implements Runnable {
     //debug props
     private int frameBgColor = Color.WHITE, o2pColor = Color.RED, a2bColor = Color.GRAY, p2tColor = Color.YELLOW, heroBoundColor = Color.GREEN;
     private int dragColor = 0xaabbddee;
-
+    private Point randCoord;
 
     //Class constructor
     public GameView(Context context, Point screenResolution) {
@@ -71,7 +72,7 @@ public class GameView extends SurfaceView implements Runnable {
         curLowerViewBound = new Point(lowerViewBound);
         curUpperViewBound = new Point(upperViewBound);
 
-        defCellSize = new Point(40,40);                      //Best size per square cell
+        defCellSize = new Point(40,40); //Best size per square cell
         fontSize = getResources().getIntArray(R.array.font_size);
         fontColor= getResources().getIntArray(R.array.font_color);
 
@@ -104,6 +105,8 @@ public class GameView extends SurfaceView implements Runnable {
         leftDragDisp = new Point(0,0); rightDragDisp = new Point(0,0);
         lastLeftDragHeld = new Point(leftDragOrigin); lastRightDragHeld = new Point(rightDragOrigin);
 
+        randCoord = new Point(-1,-1);
+
         //menu map dimensions
         menuMaxViewBound = new Point(3*MAX.x, MAX.y);
     }
@@ -121,8 +124,9 @@ public class GameView extends SurfaceView implements Runnable {
             framesSkipped = 0;
             if(gameRequested) {
                 while (!loaded) {
-                    Log.d(TAG, "Loading level");
-                    buildLevel(new Point(136, 18), new Point(3*MAX.x,MAX.y), MAPTYPE.WALLED, 1);
+                    Log.d(TAG, "Loading level. MaxDims: "+MAX.toString());
+                    //136 30
+                    buildLevel(new Point(60, 30), new Point(MAX.x,MAX.y), MAPTYPE.WALLED, 2);
                 }
             }
             if(loaded && gameRequested) {
@@ -132,6 +136,7 @@ public class GameView extends SurfaceView implements Runnable {
             }
 
             if (playing) {
+                //TODO: transfer black-n-white snippets to its own project
                 //if (curFrameChanged) {
                     //frame color changes along black-white gradient
 //                    frameBgColor += 0x00999999 / (nextCheckPoint - curFrame + 1);
@@ -291,9 +296,9 @@ public class GameView extends SurfaceView implements Runnable {
     }
     private void drawGameControlDebug(){
         pointPaint.setColor(dragColor);
-        canvas.drawRect(minLeftDragOrigin.x, minLeftDragOrigin.y, maxLeftDragOrigin.x, maxLeftDragOrigin.y, pointPaint);
-        canvas.drawRect(minRightDragOrigin.x, minRightDragOrigin.y, maxRightDragOrigin.x, maxRightDragOrigin.y, pointPaint);
-        canvas.drawRect(noControllerZone.x, 0, noControllerZone.y, MAX.y, pointPaint);
+        //canvas.drawRect(minLeftDragOrigin.x, minLeftDragOrigin.y, maxLeftDragOrigin.x, maxLeftDragOrigin.y, pointPaint);
+        //canvas.drawRect(minRightDragOrigin.x, minRightDragOrigin.y, maxRightDragOrigin.x, maxRightDragOrigin.y, pointPaint);
+        //canvas.drawRect(noControllerZone.x, 0, noControllerZone.y, MAX.y, pointPaint);
 
         paint.setColor(fontColor[5]); paint.setTextSize(fontSize[5]); paint.setTextAlign(Paint.Align.LEFT);
         canvas.drawText("lo: " + leftDragOrigin, fontSize[5],fontSize[5]*4+3, paint);
@@ -341,6 +346,8 @@ public class GameView extends SurfaceView implements Runnable {
         canvas.drawRect(0, MAX.y/2-btnSize.y/2, MAX.x, MAX.y/2+btnSize.y/2, pointPaint);
         pointPaint.setColor(Color.RED);
         canvas.drawLine(0, MAX.y/2, MAX.x, MAX.y/2, pointPaint);
+        pointPaint.setColor(Color.GREEN);
+        canvas.drawPoint(randCoord.x, randCoord.y, pointPaint);
     }
     private void drawCursorPos(){
         pointPaint.setColor(Color.BLUE);
@@ -381,6 +388,11 @@ public class GameView extends SurfaceView implements Runnable {
         loaded = true;
     }
 
+    //TODO: For Clickable View Accessibility
+    //@Override
+    //public boolean performClick(){return true;}
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent){
         int x, y;
@@ -449,6 +461,7 @@ public class GameView extends SurfaceView implements Runnable {
                 //for (int i = 0; i < motionEvent.getPointerCount() && i < 2; i++) {
                     //x = (int) motionEvent.getX(i);
                     //y = (int) motionEvent.getY(i);
+
                 if(x<noControllerZone.x) {
                     if (wrtCircle(x, y, leftDragOrigin, leftDragRadius) < 1) {
                         if (x > leftDragOrigin.x - leftDragRadius.x && x < leftDragOrigin.x + leftDragRadius.x) {
@@ -471,7 +484,7 @@ public class GameView extends SurfaceView implements Runnable {
 
                     //The day I lost my head:                                     TODO: nothing makes sense right now
                     //hero.setTarget(hero.pos());
-                    //myPath.init(hero.pos(), hero.target());
+                    //myPath.init(hero.pos(), hero.target());   //revisited:03-04-2022, Why init in the middle of things!? must be some forgotten debug
                 }
                 else if (x>noControllerZone.y) {
                     if (wrtCircle(x, y, rightDragOrigin, rightDragRadius) < 1) {
@@ -550,6 +563,10 @@ public class GameView extends SurfaceView implements Runnable {
         return true;
     }
     private void updateHeroControllerPosition(){
+
+        //TODO: De-hibernation protocol activated, 5:02 AM 04-04-2022
+        
+
         hero.setVelocity(leftDragDisp.x / 24, leftDragDisp.y / 24);
         //setting a target in multiple frames,       Done TODO: when you move, the world moves
         //hero.setTarget(curLowerViewBound.x + leftDragDisp.x, curLowerViewBound.y + leftDragDisp.y);

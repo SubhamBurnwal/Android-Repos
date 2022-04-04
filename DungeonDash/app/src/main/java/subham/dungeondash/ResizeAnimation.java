@@ -1,4 +1,4 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import android.view.View;
 import android.view.animation.Animation;
@@ -22,8 +22,8 @@ public class ResizeAnimation extends Animation {
         view.requestLayout();
     }
     @Override
-    public void initialize(int width, int height, int parentwWidth, int parentHeight){
-        super.initialize(width,height,parentwWidth,parentHeight);
+    public void initialize(int width, int height, int parentWidth, int parentHeight){
+        super.initialize(width,height,parentWidth,parentHeight);
     }
     @Override
     public boolean willChangeBounds(){

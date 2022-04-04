@@ -1,15 +1,12 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Point;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.DisplayCutout;
+//import android.view.DisplayCutout;
 import android.view.View;
-import android.view.WindowInsets;
-import android.view.WindowManager;
 
 public class MainActivity extends Activity {
     private View decorView;

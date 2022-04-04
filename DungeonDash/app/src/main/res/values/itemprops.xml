@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<array name="permal">
+<!--array name="perma1">
     <item>@array/grass</item>
     <item>@array/floor</item>
     <item>@array/lava</item>
     <item>@array/water</item>
-</array>
+</array-->
 
 <array name="grass">
     <item>200</item>

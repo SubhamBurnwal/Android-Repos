@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "subham.simpleapp"
+        applicationId "subham.dungeondash"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
@@ -17,6 +17,7 @@ android {
         }
     }
     sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/cards'] } }
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {

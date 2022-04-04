@@ -1,4 +1,4 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -673,7 +673,7 @@ class gmtry{
     }
     public static Point getCircleBisector(int x, int y, Point origin, Point radius){
         double m = sqrt((x - origin.x)*(x - origin.x) + (y - origin.y)*(y - origin.y));
-
-        return new Point((int)(origin.x + radius.x*(x-origin.x)/m),(int)(origin.y + radius.y*(y-origin.y)/m));
+        Point p = new Point((int)(origin.x + radius.x*(x-origin.x)/m),(int)(origin.y + radius.y*(y-origin.y)/m));
+        return p;
     }
 }

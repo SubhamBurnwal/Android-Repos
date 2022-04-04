@@ -1,4 +1,4 @@
- package subham.simpleapp;
+ package subham.dungeondash;
 
 import android.graphics.Point;
 import android.support.annotation.NonNull;

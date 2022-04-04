@@ -1,4 +1,4 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import org.junit.Test;
 

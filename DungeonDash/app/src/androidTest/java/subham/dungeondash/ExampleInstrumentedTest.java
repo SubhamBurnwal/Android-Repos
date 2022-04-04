@@ -1,4 +1,4 @@
-package subham.simpleapp;
+package subham.dungeondash;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("subham.simpleapp", appContext.getPackageName());
+        assertEquals("subham.dungeondash", appContext.getPackageName());
     }
 }

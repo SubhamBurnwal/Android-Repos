@@ -1,1 +1,2 @@
-include ':app', ':GameViewForms'
+include ':app'//, ':GameViewForms'
+// rootProject.name = "DungeonDash"
